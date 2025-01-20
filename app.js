@@ -10,7 +10,7 @@ let gameAttempts = 1;
 
 function printInitialMessage() {
     textOnScreen('h1', 'Jogo do número secreto');
-    textOnScreen('p', 'Escolha um número entre 1 e 10');
+    textOnScreen('p', 'Escolha um número entre 1 e 100');
 }
 
 printInitialMessage()
@@ -44,7 +44,7 @@ function newGame() {
 }
 
 function randomNumberGeneration() {
-    let sortedNumber = parseInt(Math.random() * 10 + 1);
+    let sortedNumber = parseInt(Math.random() * 100 + 1);
     if (sortedNumberList.includes(sortedNumber)) {
         return randomNumberGeneration()
     } else {
